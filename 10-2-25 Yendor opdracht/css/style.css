@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+/* GENERAL */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* DESKTOP-NAV */
+
+nav, .desktop-links{
+    display: flex;
+    height: 65px;
+    background-color: #fff404;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+nav{
+    box-shadow: 5px 5px 15px 2px rgb(0, 0, 0, 0.8);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.desktop-links{
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    float: left;
+}
+
+.social-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links{
+    height: 35px;
+    width: 35px;
+}
+
+.social-links:hover{
+    cursor: pointer;
+}
+
+/* DESKTOP-NAV-2 */
+
+.nav-img-sect{
+    height: 200px;
+    max-width: 100%;
+    background-image: url(/img/yendor.jpg);
+    padding-left: 5%;
+    position: relative;
+}
+
+#logo-left{
+    height: 120px;
+    position: absolute;
+    vertical-align: middle;
+    top: 25%;
+    transform: translateY(-25%)
+}
+
+#logo-right{
+    height: 188px;
+    position: absolute;
+    right: 10%;
+    bottom: -20px;
+}
+
+.search-field{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.user, .cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 33px;
+    width: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.user:hover, .cart:hover{
+    background-color: black;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #fff404;
+}
+
+.fa-cart-shopping:hover, .fa-user:hover{
+    color: #fff404;
+}
+
+.search-block{
+    display: flex;
+    padding: 8px;
+    height: 20px;
+    align-items: center;
+
+    background-color: white;
+    border: none;
+}
+
+input[type="search"]{
+    border: none;
+    outline: none;
+    height: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+}
+
+button i {
+    font-size: 16px; 
+    color: black; 
+    height: 33px;
+}
+
+/* BODY */
+
+.parent-container{
+    display: flex;
+    min-height: 100vh;
+    padding-top: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.left-container{
+    width: 15%;
+    /*background-color: #7b9bcf18;*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.right-container{
+    width: 85%;
+    /* background-color: rgba(153, 51, 51, 0.105); */
+    padding-right: 15px;
+}
+
+/* BODY-LEFT-CONTAINER */
+
+.filter-block{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* BODY-RIGHT-CONTAINER */
+
+.abc-block{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.abc-numbers{
+    height: 20px;
+    width: 60px;
+    background-color: rgb(208, 208, 208);
+    text-align: center;
+    margin: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12.8px;
+}
+
+.abc-numbers:hover{
+    background-color: black;
+    color: #fff404;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* BODY-LEFT-CONTAINER */
+
+.books-year{
+    padding-left: 10px;
+    margin-bottom: 7px;
+    display: flex;
+}
+
+.years{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(203, 203, 203);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 2px;
+
+    font-size: 12px;
+    height: 20px;
+    width: 30px;
+}
+
+.books-month{
+    padding-left: 10px;
+    display: flex;
+}
+
+.months{
+    background-color: rgb(203, 203, 203);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 2px;
+
+    font-size: 12px;
+    height: 20px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.months:hover, .years:hover{
+    background-color: grey;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.book-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; 
+    list-style: none; 
+    padding: 0;
+}
+
+.book-grid li{
+    display: flex;
+    align-items: stretch;
+    grid-template-columns: auto auto auto;
+    height: 320px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px
+}
+
+.book-display{
+    flex: 1;
+    padding: 20px;
+    border: 1px;
+    border-color: rgb(185, 185, 185);
+    border-style: solid;
+    width: 110px;
+}
+
+.information{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.information a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+    text-align: center;
+}
+
+.title, .prijs{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sub-title{
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.info-section{
+    margin-left: 21%;
+    margin-right: 10%;
+}
+
+/* FOOTER */
+
+footer{
+    height: 30vh;
+    background-color: rgb(174, 174, 174);
+}
